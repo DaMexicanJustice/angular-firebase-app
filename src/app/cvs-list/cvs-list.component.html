@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="starter-template">
+      <h1>List of CVS</h1>
+
+      
+      <ul>
+        <div *ngFor="let cv of cvs | async">
+            <ngb-alert type="info" [dismissible]="false">
+                <h2><a href="#">{{cv.owner}}</a> </h2>
+                <h5>Person Data</h5>
+                <p>{{cv.personData.name}} | {{cv.personData.address.street}} {{cv.personData.address.number}}, {{cv.personData.address.zipcode}} {{cv.personData.address.city}}</p>
+                <img src='{{cv.image}}'>
+                <h5>Contact</h5>
+                <p>{{cv.personData.contact.email}}</p>
+                <p>{{cv.personData.contact.phoneCode}} {{cv.personData.contact.phone}}</p>
+                <a href='{{cv.personData.linkedIn}}'>LinkedIn</a>
+
+                <h5>Resume</h5>
+                <p>{{cv.resume}}</p>
+
+                <h5>Competences</h5>
+                <table class='table table-striped'>
+                    <thead class='thead-dark'>
+                        <tr>
+                            <th scope='col'>Skills</th>
+                            <th scope='col'>Personality</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{cv.competences.skills.skillOne}}</td>
+                            <td>{{cv.competences.personality.personalityOne}}</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+
+                <h5>Experience</h5>
+                <table class='table table-striped'>
+                        <thead class='thead-dark'>
+                            <tr>
+                                <th scope='col'>Position</th>
+                                <th scope='col'>Company</th>
+                                <th scope='col'>Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{cv.experience.jobOne.position}}</td>
+                                <td>{{cv.experience.jobOne.company}}</td>
+                                <td>{{cv.experience.jobOne.year}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                <h5>Education</h5>
+                <table class='table table-striped'>
+                        <thead class='thead-dark'>
+                            <tr>
+                                <th scope='col'>Education</th>
+                                <th scope='col'>School</th>
+                                <th scope='col'>Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{cv.education.educationOne.education}}</td>
+                                <td>{{cv.education.educationOne.school}}</td>
+                                <td>{{cv.education.educationOne.year}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                <h5>Languages</h5>
+                <table class='table table-striped'>
+                        <thead class='thead-dark'>
+                            <tr>
+                                <th scope='col'>Language</th>
+                                <th scope='col'>Ability</th>
+                                <th scope='col'>Mastery</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{cv.languages.languageOne.language}}</td>
+                                <td>{{cv.languages.languageOne.use}}</td>
+                                <td>{{cv.languages.languageOne.mastery}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                <h5>Volunteer work</h5>
+                <p>{{cv.volunteer}}</p>
+
+                <h5>Spare time</h5>
+                <p>{{cv.sparetime}}</p>
+                
+            </ngb-alert> 
+          
+        </div>
+    </ul>
+  
+    <a href="/create-cv" class="btn btn-primary" role="button">Create CV</a>
+
+  </div>

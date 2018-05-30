@@ -1,0 +1,55 @@
+{
+	"cvs": {
+		"test-cv": {
+			"owner": "test user",
+			"personData": {
+				"name": "test user",
+				"address": {
+					"street": "Naverland",
+					"number": "2",
+					"zipcode": "2600",
+					"city": "Glostrup"
+				},
+				"contact": {
+					"email": "testuser@test.dk",
+					"phone": "12345678",
+					"phoneCode": "+45"
+				},
+				"linkedIn": "https://www.linkedin.com/in/test-user"
+			},
+			"resume": "not available yet",
+			"competences": {
+				"skills": {
+					"skillOne": "eat pizza"
+				},
+				"personality": {
+					"personalityOne": "communicative"
+				}
+			},
+			"experience": {
+				"jobOne": {
+					"year": "1991",
+					"position": "intern",
+					"company": "Intern Factory"
+				}
+			},
+			"education": {
+				"educationOne": {
+					"year": "1989",
+					"education": "internology",
+					"school": "Intern Machine"
+				}
+			},
+			"languages": {
+				"languageOne": {
+					"language": "english",
+					"use": "read, write, speak",
+					"mastery": "business use"
+				}
+			},
+			"sparetime": "I don't have any hobbies. All I care about is internships",
+			"volunteer": "I always work for free",
+			"image": "https://commonwealthmagazine.org/wp-content/uploads/2016/04/Intern-photo-720x480.jpg"
+		}
+	}
+}
