@@ -15,20 +15,18 @@ export class CV {
     public spareTime: string;
     public volunteer: string;
     public image: string;
+    public jsonOBJ: string;
 
-    constructor(owner: string, personData: PersonData, resume: string, competences: Competences,
-    experience: Experience, education: Education, language: Language, spareTime: string,
-    volunteer: string, image: string) {
+    constructor(owner: string, personData: PersonData, resume: string, competences: Competences, experience: Experience, education: Education, spareTime: string, volunteer: string) {
         this.owner = owner;
         this.personData = personData;
         this.resume = resume;
         this.competences = competences;
         this.experience = experience;
         this.education = education;
-        this.language = language;
         this.spareTime = spareTime;
         this.volunteer = volunteer;
-        this.image = image;
+        //this.image = image;
     }
 
 }

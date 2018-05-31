@@ -1,24 +1,127 @@
+<div class='container'>
+<h1>New Curriculum Vitae</h1>
 <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Person Data</label>
-    <input type="text" class="form-control" id="owner" aria-describedby="emailHelp" placeholder="Enter full name...">
+    <label for="personData">Person Data</label>
+    <input type="text" class="form-control" name="owner" aria-describedby="emailHelp" placeholder="Enter full name..." [(ngModel)]='owner'>
+    <label for="picture">Image</label>
+    <input type="file" name="picture" id="picture" />
+  </div>
+  <div class="form-row">
+    <label for="address">Address</label>
+    <input type="text" class="form-control" name="addressStreet" placeholder="Street name..." [(ngModel)]='personData.address.street'>
+    <div class="form-group col-md-6">
+        <input type="text" class="form-control" name="addressCity" placeholder='City...' [(ngModel)]='personData.address.city'>
+    </div>
+    <div class="form-group col-md-3">
+        <input type='text' name="addressNumber" class="form-control" placeholder='House number...' [(ngModel)]='personData.address.num'>
+    </div>
+    <div class="form-group col-md-2">
+        <input type="text" class="form-control" name="addressZipCode" placeholder='Zipcode...' [(ngModel)]='personData.address.zipcode'>
+    </div>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Address</label>
-    <input type="text" class="form-control" id="addressCity" placeholder="City...">
-    <input type="text" class="form-control" id="addressNumber" placeholder="House number...">
-    <input type="text" class="form-control" id="addressZipCode" placeholder="Zipcode...">
-    <input type="text" class="form-control" id="addressStreet" placeholder="Street name...">
+    <label for="contact">Contact</label>
+    <input type="email" class="form-control" name="contactEmail" placeholder="Email..." [(ngModel)]='personData.contact.email'>
+    <input type="number" class="form-control" name="contactPhone" placeholder="Phone number..." [(ngModel)]='personData.contact.phone'>
+    <input type="number" class="form-control" name="contactPhoneCode" placeholder="Country code..." [(ngModel)]='personData.contact.countryCode'>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Contact</label>
-    <input type="email" class="form-control" id="contactEmail" placeholder="Email...">
-    <input type="number" class="form-control" id="contactPhone" placeholder="Phone number...">
-    <input type="number" class="form-control" id="contactPhoneCode" placeholder="Country code...">
+    <label for="linkedIn">LinkedIn</label>
+    <input type="url" class="form-control" name="linkedIn" placeholder="URL..." [(ngModel)]='linkedIn'>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">LinkedIn</label>
-    <input type="email" class="form-control" id="linkedIn" placeholder="URL...">
+      <label for="resume">Resume</label>
+      <textarea class="form-control" name="resume" rows="8" placeholder="Resume (6-8 sentences)"  [(ngModel)]='resume'></textarea>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+            <label for="skills">Skills</label>
+        <input type="text" class="form-control" name="skill1" placeholder='Skill...' [(ngModel)]='skill1'>
+        <input type="text" class="form-control" name="skill2" placeholder='Skill...' [(ngModel)]='skill2'>
+        <input type="text" class="form-control" name="skill3" placeholder='Skill...' [(ngModel)]='skill3'>
+        <input type="text" class="form-control" name="skill4" placeholder='Skill...' [(ngModel)]='skill4'>
+        <input type="text" class="form-control" name="skill5" placeholder='Skill...' [(ngModel)]='skill5'>
+        <input type="text" class="form-control" name="skill6" placeholder='Skill...' [(ngModel)]='skill6'>
+    </div>
+    <div class="form-group col-md-6">
+            <label for="personality">Persoanlity traits</label>
+        <input type='text' name="personality1" class="form-control" placeholder='Personality trait...' [(ngModel)]='personality1'>
+        <input type='text' name="personality2" class="form-control" placeholder='Personality trait...' [(ngModel)]='personality2'>
+        <input type='text' name="personality3" class="form-control" placeholder='Personality trait...' [(ngModel)]='personality3'>
+        <input type='text' name="personality4" class="form-control" placeholder='Personality trait...' [(ngModel)]='personality4'>
+        <input type='text' name="personality5" class="form-control" placeholder='Personality trait...' [(ngModel)]='personality5'>
+        <input type='text' name="personality6" class="form-control" placeholder='Personality trait...' [(ngModel)]='personality6'>
+    </div>
+  </div>
+  <label for="address">Experience</label>
+  <div class="form-row">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" name="experiencePosition1" placeholder='Position...' [(ngModel)]='job1.position'>
+        </div>
+        <div class="form-group col-md-3">
+            <input type='text' name="experienceCompany1" class="form-control" placeholder='Company...' [(ngModel)]='job1.company'>
+        </div>
+        <div class="form-group col-md-2">
+            <input type="text" class="form-control" name="experienceYear1" placeholder='Year...' [(ngModel)]='job1.year'>
+        </div>
+    </div>
+    <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="experiencePosition2" placeholder='Position...' [(ngModel)]='job2.position'>
+            </div>
+            <div class="form-group col-md-3">
+                <input type='text' name="experienceCompany2" class="form-control" placeholder='Company...' [(ngModel)]='job2.company'>
+            </div>
+            <div class="form-group col-md-2">
+                <input type="text" class="form-control" name="experienceYear2" placeholder='Year...' [(ngModel)]='job2.year'>
+            </div>
+        </div>
+        <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" name="experiencePosition3" placeholder='Position...' [(ngModel)]='job3.position'>
+                </div>
+                <div class="form-group col-md-3">
+                    <input type='text' name="experienceCompany3" class="form-control" placeholder='Company...' [(ngModel)]='job3.company'>
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" class="form-control" name="experienceYear3" placeholder='Year...' [(ngModel)]='job3.year'>
+                </div>
+            </div>
+    <label for="address">Education</label>
+    <div class="form-row">
+            <div class="form-group col-md-6">                
+                <input type="text" class="form-control" name="educationName" placeholder='Education name...' [(ngModel)]='school1.education'>
+            </div>
+            <div class="form-group col-md-3">
+                <input type='text' name="educationSchool" class="form-control" placeholder='School...' [(ngModel)]='school1.school'>
+            </div>
+            <div class="form-group col-md-2">
+                <input type="text" class="form-control" name="educationYear" placeholder='Year...' [(ngModel)]='school1.year'>
+            </div>
+    </div>
+    <div class="form-row">
+            <div class="form-group col-md-6">                
+                <input type="text" class="form-control" name="educationName2" placeholder='Education name...' [(ngModel)]='school2.education'>
+            </div>
+            <div class="form-group col-md-3">
+                <input type='text' name="educationSchool2" class="form-control" placeholder='School...' [(ngModel)]='school2.school'>
+            </div>
+            <div class="form-group col-md-2">
+                <input type="text" class="form-control" name="educationYear2" placeholder='Year...' [(ngModel)]='school2.year'>
+            </div>
+    </div>
+  <div class="form-group">
+      <label for="volunteer">Volunteer</label>
+      <textarea class="form-control" name="volunteer" rows="4" placeholder="Voluntary work... (3-5 sentences)"  [(ngModel)]='volunteer'></textarea>
+  </div>
+  <div class="form-group">
+      <label for="spareTime">Spare Time</label>
+      <textarea class="form-control" name="spareTime" rows="4" placeholder="Spare Time... (3-5 sentences)"  [(ngModel)]='spareTime'></textarea>
+  </div>
+  <div class='button-styler'>
+      <button (click)='createCV()' type="button" class="btn btn-primary">Create CV</button>
+  </div>
 </form>
+</div>

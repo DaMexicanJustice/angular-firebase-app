@@ -1,7 +1,16 @@
 form {
-    margin: 0px 400px 0px;
+    margin: 0px 200px 0px;
 }
 
 input {
     margin: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: cadetblue;
+}
+
+.button-styler {
+    text-align: center;   
 }

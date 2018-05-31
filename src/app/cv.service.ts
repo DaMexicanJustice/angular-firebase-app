@@ -17,17 +17,21 @@ import {Language} from './entity/cv/helper/language';
 })
 export class CVService {
 
+  tempCV : CV;
+
   constructor(private db : AngularFireDatabase) { }
 
   getCVS(): Observable<any[]> {
     return this.db.list('cvs').valueChanges();
   }
 
-  addCV(owner: string, personData: PersonData, resume: string, competences: Competences,
-    experience: Experience, education: Education, language: Language, spareTime: string,
-    volunteer: string, image: string): void {
-    const newCV = new CV(owner, personData, resume, competences, experience, education, language, 
-      spareTime, volunteer, image);
-      
+  addCV(cv: string): void {
+    //this.db.list('cvs').push(cv);
+    console.log(cv);
   }
+
+  setTempCV(cv: CV): void {
+    this.tempCV = cv;
+  }
+
 }
