@@ -1,4 +1,8 @@
 export class Competences {
-    skills: string[];
-    personality: string[];
+    
+    competenceSet: Array<{skill: string, personality: string}>;
+
+    constructor() {
+        this.competenceSet = [];
+    }
 }

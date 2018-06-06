@@ -13,7 +13,9 @@ export class CvsListComponent implements OnInit {
 
   cvs: Observable<any[]>;
 
-  constructor(private cvService: CVService) { }
+  constructor(private cvService: CVService) { 
+  
+  }
 
   ngOnInit() {
     this.getCVS();

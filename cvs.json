@@ -19,29 +19,37 @@
 			},
 			"resume": "not available yet",
 			"competences": {
-				"skills": {
-					"skillOne": "eat pizza"
-				},
-				"personality": {
-					"personalityOne": "communicative"
+				"competenceSet": {
+					"0": {
+						"skill": "Eat Pizza",
+						"personality": "Communicative"
+					},
+					"1": {
+						"skill": "Play Weasel game",
+						"personality": "Friendly"
+					},
+					"2": {
+						"skill": "Sleeping",
+						"personality": "Loyal"
+					}
 				}
 			},
 			"experience": {
-				"jobOne": {
+				"0": {
 					"year": "1991",
 					"position": "intern",
 					"company": "Intern Factory"
 				}
 			},
 			"education": {
-				"educationOne": {
+				"0": {
 					"year": "1989",
 					"education": "internology",
 					"school": "Intern Machine"
 				}
 			},
 			"languages": {
-				"languageOne": {
+				"0": {
 					"language": "english",
 					"use": "read, write, speak",
 					"mastery": "business use"

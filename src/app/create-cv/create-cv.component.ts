@@ -55,6 +55,7 @@ export class CreateCvComponent implements OnInit {
     this.experience = new Experience();
     this.education = new Education();
     this.language = new Language();
+    this.competences = new Competences();
     this.job1 = new Job();
     this.job2 = new Job();
     this.job3 = new Job();
@@ -64,54 +65,31 @@ export class CreateCvComponent implements OnInit {
 
   createCV(): void {
     this.personData.name = this.owner;
-    this.evaluateSkills();
-    this.evaluatePersonality();
+    this.evaluateCompetences();
     this.evaluateExperience();
     this.evaluateEducation();
     const newCV = new CV(this.owner, this.personData, this.resume, this.competences, this.experience, this.education, this.spareTime, this.volunteer);
-    this.cvService.setTempCV(newCV);
-    this.cvService.addCV(JSON.stringify(newCV));
+    this.cvService.addCV(newCV);
   }
 
-  evaluateSkills(): void {
+  evaluateCompetences(): void {
     if (typeof this.skill1 != 'undefined') {
-      this.competences.skills.push(this.skill1);
+      this.competences.competenceSet.push( {skill: this.skill1, personality: this.personality1} );
     } 
     if (typeof this.skill2 != 'undefined') {
-      this.competences.skills.push(this.skill2);
+      this.competences.competenceSet.push( {skill: this.skill2, personality: this.personality2} );
     }
     if (typeof this.skill3 != 'undefined') {
-      this.competences.skills.push(this.skill3);
+      this.competences.competenceSet.push( {skill: this.skill3, personality: this.personality3} );
     }
     if (typeof this.skill4 != 'undefined') {
-      this.competences.skills.push(this.skill4);
+      this.competences.competenceSet.push( {skill: this.skill4, personality: this.personality4} );
     }
     if (typeof this.skill5 != 'undefined') {
-      this.competences.skills.push(this.skill5);
+      this.competences.competenceSet.push( {skill: this.skill5, personality: this.personality5} );
     }
     if (typeof this.skill6 != 'undefined') {
-      this.competences.skills.push(this.skill6);
-    }
-  }
-
-  evaluatePersonality(): void {
-    if (typeof this.personality1 != 'undefined') {
-      this.competences.personality.push(this.personality1);
-    }
-    if (typeof this.personality2 != 'undefined') {
-      this.competences.personality.push(this.personality2);
-    }
-    if (typeof this.personality3 != 'undefined') {
-      this.competences.personality.push(this.personality3);
-    }
-    if (typeof this.personality4 != 'undefined') {
-      this.competences.personality.push(this.personality4);
-    }
-    if (typeof this.personality5 != 'undefined') {
-      this.competences.personality.push(this.personality5);
-    }
-    if (typeof this.personality6 != 'undefined') {
-      this.competences.personality.push(this.personality6);
+      this.competences.competenceSet.push( {skill: this.skill6, personality: this.personality6} );
     }
   }
 

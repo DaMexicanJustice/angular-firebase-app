@@ -19,6 +19,7 @@
                 <p>{{cv.resume}}</p>
 
                 <h5>Competences</h5>
+                
                 <table class='table table-striped'>
                     <thead class='thead-dark'>
                         <tr>
@@ -27,13 +28,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>{{cv.competences.skills.skillOne}}</td>
-                            <td>{{cv.competences.personality.personalityOne}}</td>
+                        <tr *ngFor="let competence of cv.competences.competenceSet">
+                            <td>{{competence.skill}}</td>
+                            <td>{{competence.personality}}</td>
                         </tr>
                     </tbody>
-                    
                 </table>
+                
 
                 <h5>Experience</h5>
                 <table class='table table-striped'>
@@ -45,10 +46,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>{{cv.experience.jobOne.position}}</td>
-                                <td>{{cv.experience.jobOne.company}}</td>
-                                <td>{{cv.experience.jobOne.year}}</td>
+                            <tr *ngFor="let experience of cv.experience">
+                                <td>{{experience.position}}</td>
+                                <td>{{experience.company}}</td>
+                                <td>{{experience.year}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -63,10 +64,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>{{cv.education.educationOne.education}}</td>
-                                <td>{{cv.education.educationOne.school}}</td>
-                                <td>{{cv.education.educationOne.year}}</td>
+                            <tr *ngFor="let education of cv.education">
+                                <td>{{education.education}}</td>
+                                <td>{{education.school}}</td>
+                                <td>{{education.year}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -81,10 +82,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>{{cv.languages.languageOne.language}}</td>
-                                <td>{{cv.languages.languageOne.use}}</td>
-                                <td>{{cv.languages.languageOne.mastery}}</td>
+                            <tr *ngFor="let language of cv.languages">
+                                <td>{{language.language}}</td>
+                                <td>{{language.use}}</td>
+                                <td>{{language.mastery}}</td>
                             </tr>
                         </tbody>
                     </table>
